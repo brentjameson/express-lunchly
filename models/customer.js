@@ -55,6 +55,14 @@ class Customer {
 
   /** get all reservations for this customer. */
 
+  fullName() {
+    return `${this.firstName} ${this.lastName}`
+    // return this.fullName
+    // return await Reservation.getReservationsForCustomer(this.id);
+  }
+
+  /** get all reservations for this customer. */
+
   async getReservations() {
     return await Reservation.getReservationsForCustomer(this.id);
   }
